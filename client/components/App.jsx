@@ -1,6 +1,6 @@
 
 import React from 'react'
-import DrawCircles from './DrawCircles'
+import Canvas from './Canvas'
 
 class App extends React.Component {
 
@@ -9,18 +9,18 @@ class App extends React.Component {
 
     this.state = {
     }
+
+    // this.handleClick = this.handleClick.bind(this)
   }
 
   render() {
 
     return (
 
-      <div>
-
-        <h1>test</h1>
-        <DrawCircles />
-        
-      </div>
+      // <div>
+      
+        <Canvas width={this.props.width} height={this.props.height}/>
+      // </div>
 
     )
   }
