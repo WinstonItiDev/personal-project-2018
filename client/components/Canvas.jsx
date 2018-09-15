@@ -1,6 +1,9 @@
 
 import React from 'react'
 import Circle from './shapes/Circle'
+import initAudioWebAPI from '../webAudioAPI'
+
+let i
 
 class Canvas extends React.Component {
 
@@ -8,8 +11,13 @@ class Canvas extends React.Component {
     super(props)
     // console.log(props)
 
+    
+
     this.state = {
-      circles: []
+      circles: [{
+        cx: 0,
+        cy: 0
+      }]
     }
     this.clickReturnPos = this.clickReturnPos.bind(this)
   }
@@ -17,6 +25,8 @@ class Canvas extends React.Component {
   clickReturnPos(e) {
 
     let newCircles = this.state.circles
+
+    i = e.clientX
 
     newCircles.push({
       cx: e.clientX,
@@ -29,7 +39,7 @@ class Canvas extends React.Component {
   }
 
   render() {
-
+    initAudioWebAPI(i)
     return (
       
         <svg className='svgCanvas' width={this.props.width} height={this.props.height} onClick={this.clickReturnPos}>
