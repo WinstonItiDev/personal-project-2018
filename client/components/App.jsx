@@ -39,8 +39,6 @@ class App extends React.Component {
   render() {
 
     return (
-
-      // <div>
       <div>
         <button onMouseEnter={() => this.initOsc(250)} onMouseLeave={this.stopOsc}>1</button>
         <button onMouseEnter={() => this.initOsc(290)} onMouseLeave={this.stopOsc}>2</button>

@@ -5,6 +5,7 @@
   "main": "server",
   "scripts": {
     "start": "node server",
+    "dev": "nodemon server",
     "webpack": "webpack --watch",
     "test": "jest --watch --noStackTrace"
   },
@@ -25,9 +26,10 @@
     ]
   },
   "dependencies": {
-    "express": "^4.16.2"
-  },
-  "devDependencies": {
+    "express": "^4.16.2",
+    "knex": "^0.15.2",
+    "nodemon": "^1.18.4",
+    "sqlite3": "^4.0.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
